@@ -23,6 +23,21 @@
 - GitHub's API
 - ESLint + Prettier
 
+# :computer: Technology Stack:
+```shell
+ # Clone this repository
+  - git clone https://github.com/izabela-am/GitHub-Explorer.git
+  
+  # Enter project directory
+  - cd GitHub-Explorer
+  
+  # Install dependencies
+  - yarn
+  
+  # Start the server
+  - yarn start
+```
+
 # :beginner: Scripts:
 #### Start the Server
 ```shell
