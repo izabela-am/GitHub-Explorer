@@ -1,33 +1,65 @@
-import React from 'react';
+import React, { useState, FormEvent } from 'react';
 import { FiChevronRight } from 'react-icons/fi';
 
+import api from '../../services/api';
 import logoImg from '../../assets/logo.svg';
 import { Title, Form, Repositories } from './styles';
 
-const Dashboard: React.FC = () => (
+interface Repository {
+  full_name: string;
+  description: string;
+  owner: {
+    login: string;
+    avatar_url: string;
+  };
+}
+
+const Dashboard: React.FC = () => {
+  const [repositories, setRepositories] = useState<Repository[]>([]);
+  const [newRepo, setNewRepo] = useState('');
+
+  async function addRepository(event: FormEvent<HTMLFormElement>): Promise<void> {
+    event.preventDefault();
+
+    const response = await api.get<Repository>(`repos/${newRepo}`);
+    const repository = response.data;
+
+    setRepositories([...repositories, repository]);
+    setNewRepo('');
+  }
+
+  return (
     <>
         <img src={logoImg} alt="Logo"/>
         <Title>Explore repositórios no GitHub</Title>
 
-        <Form>
-            <input placeholder='Nome do repositório' type="text"/>
+        <Form onSubmit={addRepository}>
+            <input
+                value={newRepo}
+                onChange={(e) => setNewRepo(e.target.value)}
+                placeholder='Nome do repositório'
+                type="text"
+            />
             <button type="submit">Pesquisar</button>
         </Form>
 
         <Repositories>
-            <a href="teste">
+            {repositories.map((repository) => (
+              <a key={repository.full_name} href="teste">
                 <img
-                    src="https://avatars2.githubusercontent.com/u/40214340?s=460&u=fc8c728e6b25e56531f721cb599b82aeb9c20524&v=4"
-                    alt="Izabela"
+                    src={repository.owner.avatar_url}
+                    alt={repository.owner.login}
                 />
                 <div>
-                    <strong>Repositorio</strong>
-                    <p>Descrição do meu repositório vem aqui</p>
+                    <strong>{repository.full_name}</strong>
+                    <p>{repository.description}</p>
                 </div>
                 <FiChevronRight size={20}/>
-            </a>
+              </a>
+            ))}
         </Repositories>
     </>
-);
+  );
+};
 
 export default Dashboard;
