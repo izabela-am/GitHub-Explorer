@@ -34,7 +34,7 @@
 ```
 
 #### Ejects from create-react-app and gives full control of project configuration
-You don't really have to use this command as CRA configurations is well suited for a small project like this one
+You don't really have to use this command as CRA configurations is well suited for a small project like this one.  
 PS.: This is a one way operation
 ```shell
   - yarn eject
