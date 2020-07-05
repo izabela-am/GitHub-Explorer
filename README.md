@@ -23,7 +23,7 @@
 - GitHub's API
 - ESLint + Prettier
 
-# :computer: Technology Stack:
+# :computer: Run the project:
 ```shell
  # Clone this repository
   - git clone https://github.com/izabela-am/GitHub-Explorer.git
