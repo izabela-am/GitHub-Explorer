@@ -1,44 +1,73 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+  <img width="150" src="https://github.githubassets.com/images/modules/logos_page/Octocat.png">
+</p>
+<h1 align=center>GitHub Explorer</h1>
+<p align="center">Browse through GitHub's repositories..</p>
 
-## Available Scripts
+<div align="center">
 
-In the project directory, you can run:
+<a href="https://www.linkedin.com/in/izabela-matos/" rel="linkedin">![Author](https://img.shields.io/badge/made%20by-izabela-blue)</a>
+![Repo size](https://img.shields.io/github/repo-size/izabela-am/GitHub-Explorer)
 
-### `yarn start`
+</div>
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<p align="center">
+  <img src="https://66.media.tumblr.com/88cc3bd117d03b217b7cc4b5ed3485d7/cdd3f85adc61ab9f-de/s2048x3072/8f79b2031fdbdbdb2f09279f402a0b0e907c8d9e.png">
+</p>
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+# :computer: Technology Stack:
+- TypeScript
+- ReactJS
+- Styled Components
+- Axios
+- GitHub's API
+- ESLint + Prettier
 
-### `yarn test`
+# :computer: Run the project:
+```shell
+ # Clone this repository
+  - git clone https://github.com/izabela-am/GitHub-Explorer.git
+  
+  # Enter project directory
+  - cd GitHub-Explorer
+  
+  # Install dependencies
+  - yarn
+  
+  # Start the server
+  - yarn start
+```
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# :beginner: Scripts:
+#### Start the Server
+```shell
+  - yarn start
+```
+#### Bundle app to production mode
+```shell
+  - yarn build
+```
 
-### `yarn build`
+#### Ejects from create-react-app and gives full control of project configuration
+You don't really have to use this command as CRA configurations are well suited for a small project like this one.  
+PS.: This is a one way operation so once it's ejected you can't go back
+```shell
+  - yarn eject
+```
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# :fork_and_knife: Contributions
+```shell
+  # Fork this repository
+  # Create a branch for your features
+  git checkout -b my-feature
+  
+  # Commit your changes (and make sure to write a nice commit message!)
+  git commit -m "My message here"
+  
+  # Push your branch
+  git push origin my-feature
+```
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+# :information_source: License
+This project uses the MIT License.  
+Built with :heart: by Izabela
